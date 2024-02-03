@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="quiz.css" rel="stylesheet">
+  <script defer src="quiz.js"></script>
+  <title>Quiz App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Welcome to the Quiz App</h1>
+    </div>
+
+    <div id="category-buttons-container" class="category-buttons-container hide">
+      <button class="category-btn" data-category="math">Math</button>
+      <button class="category-btn" data-category="biology">Biology</button>
+      <button class="category-btn" data-category="physics">Physics</button>
+      <button class="category-btn" data-category="chemistry">Chemistry</button>
+      <button class="category-btn" data-category="gs21">GS21</button>
+    </div>
+
+    <div id="question-container" class="hide">
+      <div id="question">Question</div>
+      <div id="answer-buttons" class="btn-grid"></div>
+    </div>
+
+    <div id="results-container" class="hide">
+      <h2>Results</h2>
+      <p>Your Score: <span id="score-value">0</span></p>
+      <p>Percentage: <span id="percentage-value">0%</span></p>
+    </div>
+
+    <div class="controls">
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+  </div>
+</body>
+
+</html>

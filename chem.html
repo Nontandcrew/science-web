@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">Chem<span>istry</span></a>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-text container">
+            <a href="index1.html" class="back-home">Back To Home</a>
+            <h2 class="home-title">The World Of Chemistry</h2>
+            <span class="home-subtitle">Your chemistry information is here</span>
+        </div>
+    </section>
+
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span>
+        <span class="filter-item" data-filter="Information">Information</span>
+        <span class="filter-item" data-filter="animation">Animation</span>
+    </div>
+
+    <section class="post container">
+        <div class="post-box Information">
+            <img src="elec.jpg" alt="" class="post-img">
+            <h2 class="category">Information</h2>
+            <a href="elec.html" class="post-title">Electrochemistry</a>
+            <span class="post-date">1 Feb 2024</span>
+            <div class="profile">
+                <img src="korn.JPG" alt="" class="profile-img">
+                <span class="profile-name">ยศวร ชัยเดชาภินันท์</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            $(".filter-item").click(function() {
+                const value = $(this).attr("data-filter");
+                if (value == 'all') {
+                    $(".post-box").show('1000');
+                } else {
+                    $(".post-box").hide();
+                    $(".post-box." + value).show('1000');
+                }
+                $(this).addClass("active-filter").siblings().removeClass("active-filter");
+            });
+        });
+    </script>
+</body>
+</html>

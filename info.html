@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">Phy<span>sics</span></a>
+        </div>
+    </header>
+    <section class="post-header">
+        <div class="header-content post-container">
+            <a href="physic.html" class="back-home">Back To Home</a>
+            <h1 class="header-title">Harmonic Oscillation</h1>
+            <img src="os.jpg" alt="" class="header-img">
+        </div>
+    </section>
+    <section class="post-content post-container">
+        <h2 class="sub-heading">Harmonic Oscillation</h2>
+        <p class="post-text">การวิเคราะห์การเคลื่อนที่แบบกลับไปกลับมาของวัตถุ ในเบื้องต้นจะใช้สมการกฎข้อที่ 2 ของนิวตัน พร้อมกับความรู้คณิตศาสตร์ อันได้แก่ การแก้สมการอนุพันธ์อันดับที่ 2 (second order differential equation) , แคลคูลัสเบื้องต้น , จำนวนเชิงซ้อน ในเบื้องต้น การเคลื่อนที่รูปแบบนี้ จะสามารถแบ่งได้เป็น 3 ลักษณะ ได้แก่ simple harmonic , damp oscillation , driven oscillation (แท้จริงแล้วมีอีกลักษณะหนึ่ง คือ couple oscillation แต่จะขอไม่กล่าวถึงเนื่องจากใช้คณิตศาสตร์ในระดับที่สูงกว่า 3 ลักษณะข้างต้นพอสมควร) โดยในบทความนี้จะเริ่มต้นกล่าวถึงกรณีที่เป็นพื้นฐานมากที่สุด คือ simple harmonic ไปจนถึงกรณีที่ทั่วไปมากที่สุด คือ driven oscillation</p>
+        <h2 class="sub-heading">Simple Harmonic Motion</h2>
+        <p class="post-text">Simple harmonic motion เป็นการเคลื่อนที่แบบกลับไปกลับมาในอุดมคติ กล่าวคือ เคลื่อนที่โดยไม่มีแรงต้าน ไม่มีแรงบังคับการเคลื่อนที่จากภายนอก มีเพียงแค่แรงที่ทำให้เกิดการเคลื่อนที่เพียงแรงเดียว
+            ตัวอย่างเช่น ระบบมวลติดสปริงในแนวระดับ มีเพียงแรงคืนตัวสปริงที่เกี่ยวข้องกับการเคลื่อนที่ 
+            จากกฎข้อที่ 2 ของนิวตัน <br>
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mstyle displaystyle="true" scriptlevel="0">
+                  <mrow data-mjx-texclass="ORD">
+                    <mtable rowspacing=".5em" columnspacing="1em" displaystyle="true">
+                      <mtr>
+                        <mtd>
+                          <mo>&#x2212;</mo>
+                          <mi>k</mi>
+                          <mi>x</mi>
+                          <mo>=</mo>
+                          <mi>m</mi>
+                          <mfrac>
+                            <msup>
+                              <mi>d</mi>
+                              <mn>2</mn>
+                            </msup>
+                            <mrow>
+                              <mi>d</mi>
+                              <msup>
+                                <mi>t</mi>
+                                <mn>2</mn>
+                              </msup>
+                            </mrow>
+                          </mfrac>
+                          <mi>x</mi>
+                          <mo stretchy="false">&#x2194;</mo>
+                          <mfrac>
+                            <msup>
+                              <mi>d</mi>
+                              <mn>2</mn>
+                            </msup>
+                            <mrow>
+                              <mi>d</mi>
+                              <msup>
+                                <mi>t</mi>
+                                <mn>2</mn>
+                              </msup>
+                            </mrow>
+                          </mfrac>
+                          <mi>x</mi>
+                          <mo>+</mo>
+                          <mfrac>
+                            <mi>k</mi>
+                            <mi>m</mi>
+                          </mfrac>
+                          <mi>x</mi>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                  </mrow>
+                </mstyle>
+              </math>
+              สังเกตว่าสมการนี้เป็นสมการอนุพันธ์อันดับ 2
+กำหนดค่าคงที่ <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+    <mstyle displaystyle="true" scriptlevel="0">
+      <mrow data-mjx-texclass="ORD">
+        <mtable rowspacing=".5em" columnspacing="1em" displaystyle="true">
+          <mtr>
+            <mtd>
+              <mi>&#x3C9;</mi>
+              <mo>&#x2261;</mo>
+              <msqrt>
+                <mfrac>
+                  <mi>k</mi>
+                  <mi>m</mi>
+                </mfrac>
+              </msqrt>
+            </mtd>
+          </mtr>
+        </mtable>
+      </mrow>
+    </mstyle>
+  </math> ซึ่งเป็นความถี่เชิงมุมของการสั่น
+เราสามารถยกคำตอบของสมการอนุพันธ์อันดับ 2 ได้ว่า x(t)=Asin(ωt+∅) <br>
+โดย ∅ เรียกว่ามุมเฟสตั้งต้น สามารถพิจารณาได้จากเงื่อนไขตอนเริ่มต้นการเคลื่อนที่ของวัตถุ (Initial condition)
+      และ A เป็นค่าคงที่ ที่มีหน่วยเดียวกับ x เรียกว่าแอมพลิจูด เป็นระยะที่วัตถุไกลจากจุดสมดุลมากที่สุด     
+การแก้สมการอนุพันธ์อันดับ 2 ดังกล่าว ทำให้เราทราบถึง ตำแหน่งของวัตถุที่เวลาใดๆ หากเราต้องการทราบเพิ่มเติมถึง อัตราเร็วและอัตราเร่ง ที่เวลาใดๆ ก็จะสามารถทำได้โดยง่ายด้วยการหาอนุพันธ์ของตำแหน่งเทียบเวลา ดังแสดงด้านล่างนี้ <br>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+    <mstyle displaystyle="true" scriptlevel="0">
+      <mrow data-mjx-texclass="ORD">
+        <mtable rowspacing=".5em" columnspacing="1em" displaystyle="true">
+          <mtr>
+            <mtd>
+              <mi>v</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mfrac><mrow><mi>d</mi><mi>x</mi></mrow>
+                <mrow>
+                  <mi>d</mi>
+                  <mi>t</mi>
+                </mrow>
+              </mfrac>
+              <mo>=</mo>
+              <mi>&#x3C9;</mi>
+              <mi>A</mi>
+              <mi>c</mi>
+              <mi>o</mi>
+              <mi>s</mi>
+              <mo stretchy="false">(</mo>
+              <mi>&#x3C9;</mi>
+              <mi>t</mi>
+              <mo>+</mo>
+              <mi>&#x3D5;</mi>
+              <mo stretchy="false">)</mo>
+            </mtd>
+          </mtr>
+        </mtable>
+      </mrow>
+    </mstyle>
+  </math> <br>
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+    <mstyle displaystyle="true" scriptlevel="0">
+      <mrow data-mjx-texclass="ORD">
+        <mtable rowspacing=".5em" columnspacing="1em" displaystyle="true">
+          <mtr>
+            <mtd>
+              <mi>a</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mo>&#x2212;</mo>
+              <msup>
+                <mi>&#x3C9;</mi>
+                <mn>2</mn>
+              </msup>
+              <mi>A</mi>
+              <mi>s</mi>
+              <mi>i</mi>
+              <mi>n</mi>
+              <mo stretchy="false">(</mo>
+              <mi>&#x3C9;</mi>
+              <mi>t</mi>
+              <mo>+</mo>
+              <mi>&#x3D5;</mi>
+              <mo stretchy="false">)</mo>
+            </mtd>
+          </mtr>
+        </mtable>
+      </mrow>
+    </mstyle>
+  </math> <br>
+
+            </p>
+            <h2 class="sub-heading">Damped Harmonic Motion</h2>
+            <p class="post-text">กรณีนี้เกิดเมื่อการสั่นของระบบเกิดขึ้นในกรณีที่มีแรงต้าน ในธรรมชาติแรงต้านจะมีค่าแปรผันโดยตรงกับ ความเร็วหรือความเร็วกำลังสอง ของวัตถุ แล้วแต่กรณี และมีทิศตรงกันข้ามกับทิศความเร็วของวัตถุเสมอ โดยในบทความนี้จะพิจารณาเฉพาะกรณีที่แรงต้านมีค่าแปรผันโดยตรงกับความเร็วเท่านั้น โดยแรงต้าน f ⃑=-bv ⃑ ซึ่ง b เป็นค่าคงที่ <br> จากกฎข้อที่สองของนิวตัน <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <mstyle displaystyle="true" scriptlevel="0">
+                <mrow data-mjx-texclass="ORD">
+                  <mtable rowspacing=".5em" columnspacing="1em" displaystyle="true">
+                    <mtr>
+                      <mtd>
+                        <mo>&#x2212;</mo>
+                        <mi>k</mi>
+                        <mi>x</mi>
+                        <mo>&#x2212;</mo>
+                        <mi>b</mi>
+                        <mfrac>
+                          <mrow>
+                            <mi>d</mi>
+                            <mi>x</mi>
+                          </mrow>
+                          <mrow>
+                            <mi>d</mi>
+                            <mi>t</mi>
+                          </mrow>
+                        </mfrac>
+                        <mo>=</mo>
+                        <mi>m</mi>
+                        <mfrac>
+                          <msup>
+                            <mi>d</mi>
+                            <mn>2</mn>
+                          </msup>
+                          <mrow>
+                            <mi>d</mi>
+                            <msup>
+                              <mi>t</mi>
+                              <mn>2</mn>
+                            </msup>
+                          </mrow>
+                        </mfrac>
+                        <mi>x</mi>
+                      </mtd>
+                    </mtr>
+                  </mtable>
+                </mrow>
+              </mstyle>
+            </math>  </p>
+            <a href="9A8201DF3720C6174F54E83C7F0DD3D3B59422AE_Tokyo Damp.pdf">
+              <button>คลิกเพื่ออ่านเพิ่มเติม</button>
+          </a>
+    </section>
+   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
